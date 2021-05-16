@@ -4,6 +4,7 @@
     max-width: 80%;
   }
 
+  // Main section
   &__section {
     @include bdr;
     @include flexbox($direction: column);
@@ -15,11 +16,10 @@
       font-size: 3.2rem;
       margin: 3rem auto;
     }
-    &-description{
+    &-description {
       color: $text-content-color;
       font-size: 1.6rem;
       margin-bottom: 3rem;
-      
     }
     &-advice {
       background-color: $btn-bg-color;
@@ -30,9 +30,42 @@
       padding: 2rem;
       width: 100%;
 
-      a{
-      color: #fff;
+      a {
+        color: #fff;
       }
+    }
+  }
+
+  // Form
+  &__form {
+    @include bdr;
+    width: 100%;
+
+    input {
+      border: 1px solid #bbb;
+      border-radius: 0.5rem;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      outline: none;
+      padding: 2rem;
+      width: 100%;
+
+      &::placeholder {
+        color: #bbb;
+      }
+    }
+    button {
+      background-color: $btn-bg-color;
+      border: none;
+      border-radius: 0.5rem;
+      color: #fff;
+      font: {
+        size: 1.6rem;
+        weight: 700;
+      }
+      outline: none;
+      padding: 2rem;
+      width: 100%;
     }
   }
 }
