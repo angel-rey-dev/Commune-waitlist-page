@@ -1,0 +1,13 @@
+// *****************************
+//       MAIN CONTAINER
+// *****************************
+
+.main-container > *{
+    @include bdr;
+}
+.main-container{
+    @include bdr(green);
+    @include flexbox($direction:column);
+    background-color: $body-bg-color;
+    width: 100%;
+}

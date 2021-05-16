@@ -1,0 +1,38 @@
+// ***********************************
+//          MAIN HEADER
+// ***********************************
+
+.main-header {
+  @include flexbox($justify: space-between);
+  margin: 3rem auto;
+  width: 90%;
+
+  &__logo{
+      max-width: 15rem;
+  }
+  &__navbar {
+    @include bdr;
+    position: relative;
+  }
+
+  &__nav {
+    display: none;
+  }
+  .active {
+    @include flexbox($direction: column);
+    list-style-type: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient($btn-bg-color, #f0afc7);
+    a {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

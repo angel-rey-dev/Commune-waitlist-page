@@ -1,0 +1,38 @@
+.main-content {
+  @include flexbox($direction: column);
+  &__illustration {
+    max-width: 80%;
+  }
+
+  &__section {
+    @include bdr;
+    @include flexbox($direction: column);
+    text-align: center;
+    width: 90%;
+
+    &-title {
+      color: $headings-color;
+      font-size: 3.2rem;
+      margin: 3rem auto;
+    }
+    &-description{
+      color: $text-content-color;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+      
+    }
+    &-advice {
+      background-color: $btn-bg-color;
+      border-radius: 3rem;
+      color: #fff;
+      font-size: 1.4rem;
+      order: -1;
+      padding: 2rem;
+      width: 100%;
+
+      a{
+      color: #fff;
+      }
+    }
+  }
+}
