@@ -7,7 +7,6 @@
   width: 90%;
   max-width: 50rem;
 
-
   @include for-medium-screens {
     flex-direction: row;
     max-width: 80rem;
@@ -15,7 +14,9 @@
   &__illustration {
     display: none;
     @include for-medium-screens {
+      animation: beat 1s 1s alternate infinite;
       display: block;
+      padding-right: 5rem;
       order: -1;
       width: 50%;
     }
@@ -83,5 +84,13 @@
       padding: 2rem;
       width: 100%;
     }
+  }
+}
+@keyframes beat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
   }
 }

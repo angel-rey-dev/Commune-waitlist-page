@@ -7,13 +7,16 @@
   margin: 3rem auto;
   width: 90%;
   max-width: 50rem;
-  @include for-medium-screens{
-  width: 80%;
-  max-width: 80rem;
+  @include for-medium-screens {
+    width: 90%;
+    max-width: 80rem;
+    margin: 5rem auto 10rem;
   }
 
-  &__logo{
-      max-width: 15rem;
+  &__logo {
+    @include for-medium-screens {
+      width: 20rem;
+    }
   }
   &__navbar {
     @include bdr;
