@@ -7,7 +7,8 @@
 }
 .main-container{
     @include bdr(green);
-    @include flexbox($direction:column);
+    @include flexbox($direction:column,$justify:flex-start);
     background-color: $body-bg-color;
+    min-height: 100vh;
     width: 100%;
 }

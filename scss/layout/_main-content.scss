@@ -1,7 +1,24 @@
+// *********************************
+//          MAIN CONTENT
+// *********************************
+
 .main-content {
   @include flexbox($direction: column);
+  width: 90%;
+  max-width: 50rem;
+
+
+  @include for-medium-screens {
+    flex-direction: row;
+    max-width: 80rem;
+  }
   &__illustration {
-    max-width: 80%;
+    display: none;
+    @include for-medium-screens {
+      display: block;
+      order: -1;
+      width: 50%;
+    }
   }
 
   // Main section
@@ -9,7 +26,6 @@
     @include bdr;
     @include flexbox($direction: column);
     text-align: center;
-    width: 90%;
 
     &-title {
       color: $headings-color;

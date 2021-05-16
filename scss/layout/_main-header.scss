@@ -6,6 +6,11 @@
   @include flexbox($justify: space-between);
   margin: 3rem auto;
   width: 90%;
+  max-width: 50rem;
+  @include for-medium-screens{
+  width: 80%;
+  max-width: 80rem;
+  }
 
   &__logo{
       max-width: 15rem;
