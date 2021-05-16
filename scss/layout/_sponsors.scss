@@ -9,6 +9,7 @@
   max-width: 50rem;
   @include for-medium-screens {
     max-width: 80rem;
+    margin: 8rem auto 5rem;
     justify-content: flex-start;
   }
 
