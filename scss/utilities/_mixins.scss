@@ -2,10 +2,6 @@
 //               MIXINS
 // ****************************************
 
-@mixin bdr($bdr-color: magenta) {
-  border: 1px solid $bdr-color;
-}
-
 @mixin flexbox(
   $direction: row,
   $wrap: nowrap,
