@@ -26,8 +26,8 @@
     @include bdr;
     position: relative;
     @include for-large-screens {
-      width: 70%;
-      max-width: 57rem;
+      width: 60%;
+      max-width: 50rem;
     }
   }
 
@@ -59,12 +59,13 @@
       text-decoration: none;
       @include for-large-screens {
         color: #000;
+      font-size: 1.6rem;
         margin-bottom: 0;
       }
     }
     .btn {
       background-color: $btn-bg-color;
-      border-radius: 1rem;
+      border-radius: .5rem;
       color: #fff;
       font-weight: 700;
       padding: 2rem;
