@@ -3,7 +3,7 @@
 // ****************************************
 
 @mixin bdr($bdr-color: magenta) {
-  border: 1px solid $bdr-color;
+  border: 0px solid $bdr-color;
 }
 
 @mixin flexbox(

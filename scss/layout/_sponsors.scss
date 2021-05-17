@@ -12,6 +12,9 @@
     margin: 8rem auto 5rem;
     text-align: center;
   }
+  @include for-large-screens {
+    margin: 5rem auto 2rem;
+  }
 
   &__title {
     font-size: 1.8rem;

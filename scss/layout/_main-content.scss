@@ -38,6 +38,7 @@
     text-align: center;
     @include for-large-screens {
       text-align: left;
+      align-items: flex-start;
     }
     &-title {
       color: $headings-color;
@@ -81,6 +82,14 @@
       @include flexbox($justify: space-between);
     }
 
+    label{
+      @include for-large-screens{
+        width: 65%;
+        max-width: 40rem;
+      
+      }
+    }
+
     input {
       border: 1px solid #bbb;
       border-radius: 0.5rem;
@@ -95,8 +104,6 @@
       }
       @include for-large-screens {
         margin-bottom: 0;
-        width: 110%;
-        max-width: 40rem;
       }
     }
     button {
@@ -112,7 +119,7 @@
       padding: 2rem;
       width: 100%;
       @include for-large-screens {
-        width: 35%;
+        width: 30%;
         max-width: 15rem;
       }
     }
