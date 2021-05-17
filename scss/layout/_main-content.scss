@@ -102,10 +102,14 @@
       margin-bottom: 1rem;
       outline: none;
       padding: 2rem;
+      transition: all 0.5s;
       width: 100%;
 
       &::placeholder {
         color: #bbb;
+      }
+      &:focus {
+        border-color: $btn-bg-color;
       }
       @include for-large-screens {
         margin-bottom: 0;
@@ -113,6 +117,9 @@
     }
     .invalid {
       border-color: red;
+    }
+    .valid {
+      border-color: green;
     }
     .warning {
       color: red;
@@ -122,6 +129,7 @@
       z-index: -10;
       position: absolute;
       transform: translateY(-200%);
+      transition: all .5s;
     }
     .active-warning {
       position: static;
