@@ -10,7 +10,7 @@
   @include for-medium-screens {
     width: 90%;
     max-width: 80rem;
-    margin: 5rem auto 10rem;
+    margin: 5rem auto 8rem;
   }
 
   &__logo {
@@ -24,9 +24,6 @@
   }
 
   &__nav {
-    display: none;
-  }
-  .active {
     @include flexbox($direction: column);
     list-style-type: none;
     position: fixed;
@@ -35,12 +32,29 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient($btn-bg-color, #f0afc7);
-    a {
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+    @include for-large-screens {
+      background: none;
+      position: static;
+      transform: translateX(0%);
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+    }
+    &-link {
       font-size: 2rem;
       margin-bottom: 2rem;
       display: block;
       color: #fff;
       text-decoration: none;
+    @include for-large-screens {
+    color: #000;
+    margin-bottom: 0;
     }
+    }
+  }
+  .active {
+    transform: translateX(0%);
   }
 }

@@ -10,6 +10,9 @@
   position: relative;
   z-index: 100;
 
+  @include for-large-screens{
+    display: none;
+  }
 }
 .main-header__hamburger-btn span {
   width: 100%;
