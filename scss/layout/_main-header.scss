@@ -15,6 +15,7 @@
   @include for-large-screens{
     width: 80%;
     max-width: 100rem;
+    margin: 5rem auto;
   }
 
   &__logo {
