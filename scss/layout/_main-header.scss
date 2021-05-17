@@ -42,6 +42,7 @@
     background: linear-gradient($btn-bg-color, #f0afc7);
     transition: all 0.5s ease;
     transform: translateX(100%);
+    z-index: 10;
     @include for-large-screens {
       background: none;
       position: static;
@@ -57,21 +58,35 @@
       display: block;
       color: #fff;
       text-decoration: none;
+      transition: all 0.5s;
       @include for-large-screens {
         color: #000;
         font-size: 1.6rem;
         margin-bottom: 0;
+      }
+      &:hover {
+        transform: scale(1.01);
+      }
+      &:active {
+        transform: scale(0.95);
       }
     }
     .btn {
       background-color: $btn-bg-color;
       border-radius: 0.5rem;
       color: #fff;
+      cursor: pointer;
       font-weight: 700;
       padding: 2rem;
+      &:hover {
+        background-color: lighten($btn-bg-color, 15%);
+      }
+      &:active {
+        background-color: $btn-bg-color;
+      }
     }
   }
-  .active {
+  .active-menu {
     transform: translateX(0%);
   }
 }

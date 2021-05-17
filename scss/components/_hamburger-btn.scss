@@ -23,6 +23,9 @@
   border-radius: 2px;
   transition: all 0.5s ease;
 }
+.btn-active span{
+  background-color: #fff;
+}
 .main-header__hamburger-btn span:nth-child(1) {
   top: 0px;
   left: 0px;
