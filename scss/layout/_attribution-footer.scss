@@ -4,4 +4,10 @@
 
 .attribution-footer{
     font-size: 1.6rem;
+    text-align: center;
+
+    a{
+        color: $btn-bg-color;
+        font-weight: 700;
+    }
 }
