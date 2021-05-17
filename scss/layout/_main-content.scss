@@ -33,7 +33,6 @@
 
   // Main section
   &__section {
-    @include bdr;
     @include flexbox($direction: column);
     text-align: center;
     @include for-large-screens {
@@ -69,24 +68,30 @@
 
       a {
         color: #fff;
+        transition: all 0.5s;
+        &:hover {
+          font-weight: 700;
+        }
+        &:active {
+          color: darkorchid;
+        }
       }
     }
   }
 
   // Form
   &__form {
-    @include bdr;
     width: 100%;
     max-width: 50rem;
+    position: relative;
     @include for-large-screens {
       @include flexbox($justify: space-between);
     }
 
-    label{
-      @include for-large-screens{
+    label {
+      @include for-large-screens {
         width: 65%;
         max-width: 40rem;
-      
       }
     }
 
@@ -106,11 +111,33 @@
         margin-bottom: 0;
       }
     }
+    .invalid {
+      border-color: red;
+    }
+    .warning {
+      color: red;
+      font-size: 1.6rem;
+      display: block;
+      margin-bottom: 1rem;
+      z-index: -10;
+      position: absolute;
+      transform: translateY(-200%);
+    }
+    .active-warning {
+      position: static;
+      transform: translateY(0%);
+      z-index: 10;
+      @include for-large-screens {
+        position: absolute;
+        transform: translateY(250%);
+      }
+    }
     button {
       background-color: $btn-bg-color;
       border: none;
       border-radius: 0.5rem;
       color: #fff;
+      cursor: pointer;
       font: {
         size: 1.6rem;
         weight: 700;
@@ -118,6 +145,15 @@
       outline: none;
       padding: 2rem;
       width: 100%;
+      transition: all 0.5s;
+
+      &:hover {
+        background-color: lighten($btn-bg-color, 10%);
+      }
+      &:active {
+        background-color: $btn-bg-color;
+        transform: scale(0.95);
+      }
       @include for-large-screens {
         width: 30%;
         max-width: 15rem;
