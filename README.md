@@ -1,6 +1,6 @@
 # Codewell - Commune waitlist page
 
-![Design preview for the Commune waitlist page coding challengue](Design\Dektop.webp)
+![Design preview for the Commune waitlist page coding challengue](./Design/Desktop.webp)
 
 ## Welcome! 👋
 
